@@ -18,7 +18,14 @@ The two distinct advantages going the isomorphic way is
 2. Also with the current trend our apps do lot stuff in the client side. Due to this, usually you will notice during the initial render there is a delay. To avoid this we feed the initial load from the server thereby making it really fast.
 
 
-#### How everything is tied up to build the isomorphic app?
+#### Setup
+
+    You can jump into the next section if you have a fair understanding on how everything is setup.
+
+#### Understanding the server side rendering so that it becomes clear how everything is tied up to build the isomorphic app
+
+Jump into the code get your hands dirty and refer this section to understand how things from the server end is setup.
+
 1. We create a simple express server in `server.js` which will be the entry point for the server.
 2. When the page loads, we check if the url matches with the path from the react router and then
   * We create the redux store with `allReducers` and the initial state, `initialState`
@@ -67,9 +74,13 @@ window.__REDUX_STATE__ = JSON.parse('<%- JSON.stringify(initialState) %>');
 
 6. On receiving the response from the server, react checks if the server rendered HTML file is different from client. If it notices it is different, then client gets rendered and due to this you lose the advantage of server rendering as the client renders again. 
 
-7. Client entry point is `client.js`
- 
-* Also included is React-Bootstrap to help you understand how to use bootstrap with react. 
+7. If your server rendering went fine with the initial state, then you will see the **Todo list home page** with a dummy task called *Initial State To Do Item*
+
+8. Client entry point is `client.js`
+
+9. Apart from the landing page, which is the **Home page**, there is only a dummy **Help page**. This is just to show you guys how to use bootstrap with react for navigation.
+
+***
 
 
     
