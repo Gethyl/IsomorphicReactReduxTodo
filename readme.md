@@ -86,21 +86,20 @@ window.__REDUX_STATE__ = JSON.parse('<%- JSON.stringify(initialState) %>');
 
   **There are few *npm* packages which can be omitted. I will clean them up in the coming days.**
 
- 1. Install all the relevant packages (refer to `package.json`)
+1. Install all the relevant packages (refer to `package.json`)
 
 > npm i -S  package-name
 
- 2. If you notice the **script** in `package.json`, there is ***dev*** & ***server***
+2. If you notice the **script** in `package.json`, there is ***dev*** & ***server***
   * **dev** - is using webpack dev server to build the client related code and to bundle it at `dist/js/bundle.js`
 
 > npm run dev
 
   * **server** - This actually does webpack to build the client/ bundle them + uses babel-node to build/transpile ES6 code in server to ES5.
   
-  > npm run server
+> npm run server
 
-  > **On a side note using babel-node on production is bad idea, please refer the official babel documents on how to use babel instead.**
-
+> **On a side note using babel-node on production is bad idea, please refer the official babel documents on how to use babel instead.**
 
  3. Follow a top down approach. First set up just the client and we can dive into the server later.
 
