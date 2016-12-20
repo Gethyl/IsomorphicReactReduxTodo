@@ -1,10 +1,10 @@
 import update from 'immutability-helper';
 
-//const initialState = { items:[]}
+const initialState = { items:[]}
 //const windowState = window.__REDUX_STATE__
 let id = 0;
 
-const todoReducer = (state={}, action) => { //(state=initialState, action) => {
+const todoReducer = (state=initialState, action) => { //(state=initialState, action) => {
   switch (action.type) {
     case 'ADD_ITEM':
       return {
