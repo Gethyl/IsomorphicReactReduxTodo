@@ -7,9 +7,8 @@
     "babel-cli": "^6.18.0",
     "babel-core": "^6.14.0",
     "babel-loader": "^6.2.5",
-    "babel-plugin-add-module-exports": "^0.2.1",
     "babel-plugin-react-html-attrs": "^2.0.0",
-    "babel-plugin-transform-class-properties": "^6.11.5",
+    "babel-plugin-transform-class-properties": "^6.19.0",
     "babel-plugin-transform-decorators-legacy": "^1.3.4",
     "babel-preset-es2015": "^6.14.0",
     "babel-preset-react": "^6.11.1",
@@ -21,12 +20,10 @@
     "express": "^4.14.0",
     "file-loader": "^0.9.0",
     "immutability-helper": "^2.0.0",
-    "nodemon": "^1.11.0",
     "path": "^0.12.7",
     "react": "^15.3.1",
     "react-bootstrap": "^0.30.7",
     "react-dom": "^15.3.1",
-    "react-google-maps": "^4.11.0",
     "react-redux": "^4.4.6",
     "react-router": "^2.8.1",
     "redux": "^3.6.0",
@@ -40,7 +37,7 @@
   },
   "scripts": {
     "dev": "webpack-dev-server --content-base --inline --hot",
-    "server": "webpack && babel-node  src/js/server/server.js" 
+    "server": "webpack && babel-node  src/js/server/server.js"
   },
   "author": "Gethyl",
   "license": "ISC"

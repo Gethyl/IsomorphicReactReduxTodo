@@ -9,20 +9,20 @@
   - Delete an item.
   - And finally, mark an item as complete when you are done with the task.
 
+***
+
 #### What is an isomorphic app?
-    As per the definition [here](http://isomorphic.net/javascript)
+   As per the definition [mentioned here](http://isomorphic.net/javascript).
+
 > JavaScript applications which run both client-side and server-side. Isomorphic JavaScript frameworks are the next step in the evolution of JavaScript frameworks. These new libraries and frameworks are solving the problems associated with traditional JavaScript frameworks.
 
 The two distinct advantages going the isomorphic way is
 1. SEO friendly.
 2. Also with the current trend our apps do lot stuff in the client side. Due to this, usually you will notice during the initial render there is a delay. To avoid this we feed the initial load from the server thereby making it really fast.
 
+***
 
-#### Setup
-
-    You can jump into the next section if you have a fair understanding on how everything is setup.
-
-#### Understanding the server side rendering so that it becomes clear how everything is tied up to build the isomorphic app
+#### Understanding the server side rendering works to build the isomorphic app
 
 Jump into the code get your hands dirty and refer this section to understand how things from the server end is setup.
 
@@ -82,6 +82,30 @@ window.__REDUX_STATE__ = JSON.parse('<%- JSON.stringify(initialState) %>');
 
 ***
 
+#### Getting Started
 
+*** There are few **npm** packages which can be omitted. I will clean them up in the coming days.***
+
+ 1. Install all the relevant packages (refer to `package.json`)
+
+> npm i -S  package-name
+
+ 2. If you notice the **script** in `package.json`, there is ***dev*** & ***server***
+  * **dev** - is using webpack dev server to build the client related code and to bundle it at `dist/js/bundle.js`
+
+> npm run dev
+
+  * **server** - This actually does webpack to build the client/ bundle them + uses babel-node to build/transpile ES6 code in server to ES5.
+  
+  > npm run server
+
+  > **On a side note using babel-node on production is bad idea, please refer the official babel documents on how to use babel instead.**
+
+
+ 3. Follow a top down approach. First set up just the client and we can dive into the server later.
+
+ 4. Get a basic React-Redux client up and running with all the necessary actions/reducers and the store. 
+
+ 5. Once you are clear with the how the app works in client side, dive into the server part. You can refer to `server.js` which is the entry point.
     
 
