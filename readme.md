@@ -84,7 +84,7 @@ window.__REDUX_STATE__ = JSON.parse('<%- JSON.stringify(initialState) %>');
 
 #### Getting Started
 
-*** There are few **npm** packages which can be omitted. I will clean them up in the coming days.***
+  **There are few *npm* packages which can be omitted. I will clean them up in the coming days.**
 
  1. Install all the relevant packages (refer to `package.json`)
 
